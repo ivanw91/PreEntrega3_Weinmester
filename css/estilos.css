@@ -18,18 +18,6 @@
   grid-area: section_3;
 }
 
-/* Ubicacion mapa */
-.map_place {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  grid-area: map;
-}
-
-.mapa {
-  justify-content: center;
-}
-
 /* Navbar */
 .nav-link {
   text-align: center;
@@ -66,13 +54,17 @@ div.horarios h3 {
   font-family: "Seaweed Script", Sans-serif;
   background-color: white;
   border-radius: 25px;
-  margin: 30px;
+  margin: 10px;
   font-size: 45px;
   font-weight: 400;
   text-align: center;
 }
 
-ul.list_time li {
+ul {
+  padding-left: 0;
+}
+
+.list_time li {
   background-color: white;
   border-radius: 25px;
   font-family: Sans-serif;
@@ -81,10 +73,6 @@ ul.list_time li {
   margin: 10px;
   font-size: 1.8rem;
   font-weight: 400;
-}
-
-ul {
-  padding-left: 0;
 }
 
 /* Reserva */
@@ -139,18 +127,27 @@ h3.place {
   text-align: center;
 }
 
+.map_place {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  grid-area: map;
+}
+
+.mapa {
+  justify-content: center;
+}
+
 /* Footer */
 footer {
   background-color: black;
   grid-area: footer;
   margin-top: 15px;
 }
-
 footer div {
   display: flex;
   justify-content: center;
 }
-
 footer div h6 {
   color: rgba(255, 255, 255, 0.607);
 }
