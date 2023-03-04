@@ -160,6 +160,312 @@ footer div h6 {
   height: 45px;
 }
 
+/* RESPONSIVE INDEX DESKTOP */
+@media (min-width: 1030px) {
+  .horarios {
+    grid-area: horarios;
+  }
+  .escribenos {
+    grid-area: escribenos;
+  }
+  .grid_area2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "horarios map" "escribenos map";
+  }
+}
+/* ESTILOS CARTA MOBILE */
+.container_carta {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "Nav_bar" "carta_s1" "carta_s2" "carta_s3" "carta_s4" "carta_s5" "carta_s6" "menu_move" "footer";
+}
+
+.Nav_bar {
+  grid-area: Nav_bar;
+}
+
+.carta_s1 {
+  grid-area: carta_s1;
+}
+
+.carta_s2 {
+  grid-area: carta_s2;
+}
+
+.carta_s3 {
+  grid-area: carta_s3;
+}
+
+.carta_s4 {
+  grid-area: carta_s4;
+}
+
+.carta_s5 {
+  grid-area: carta_s5;
+}
+
+.carta_s6 {
+  grid-area: carta_s6;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* Botones flotantes */
+.menu_move {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: grid;
+}
+
+/* TEXT STYLE CARTA */
+h2,
+h4 {
+  font-family: "Seaweed Script", cursive;
+  font-size: 2.5rem;
+}
+
+h5 {
+  color: white black;
+  padding: 10px;
+  margin: 10px;
+  border-left: solid 10px;
+  border-color: aquamarine;
+  background-color: rgba(127, 229, 255, 0.774);
+}
+
+.bg_shadow {
+  background-color: rgba(13, 13, 13, 0.8745098039);
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.grid_area1,
+.grid_area2,
+.grid_area3,
+.footer,
+#grid_container {
+  width: 100vw;
+}
+
+.text_menu {
+  text-align: center;
+  color: white;
+  margin: 15px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.info_detail {
+  margin-top: -15px;
+  color: rgba(200, 200, 200, 0.598);
+}
+
+/* CARTA DESKTOP */
+@media (min-width: 1030px) {
+  .ge1 {
+    grid-area: ge1;
+  }
+  .ge2 {
+    grid-area: ge2;
+  }
+  .ge3 {
+    grid-area: ge3;
+  }
+  .grid_empanada {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 205px 1fr;
+    grid-template-areas: "ge3 ge3" "ge1 ge2";
+  }
+  .gp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "gp1 gp2";
+  }
+  #header {
+    grid-area: header;
+  }
+  .menu_move {
+    display: none;
+  }
+  .container_carta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 0.5fr 0.5fr 0fr;
+    grid-template-areas: "header header header header" "carta_s1 carta_s1 carta_s2 carta_s6" "carta_s3 carta_s4 carta_s5 carta_s5" "footer footer footer footer";
+    justify-content: center;
+  }
+  .footer {
+    height: 100px;
+  }
+  section#C_1,
+  section#C_2,
+  section#C_3,
+  section#C_4,
+  section#C_5,
+  section#C_6 {
+    background-color: rgba(255, 255, 255, 0.377);
+    border-radius: 10px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1000px) {
+  .navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+/* CSS GALERIA */
+.gallery-item {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.description-btn:hover {
+  opacity: 1;
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.gallery-item:hover .description {
+  opacity: 1;
+}
+
+/* Formulario */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+h2 {
+  text-align: center;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e5e5e5;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px;
+}
+
+button[type=submit] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #3e8e41;
+}
+
+/* STYLE SUGERENCIAS */
+/* Formulario */
+form {
+  max-width: 500px;
+  margin: 15px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e5e5e5;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px;
+}
+
+button[type=submit] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #3e8e41;
+}
+
 * {
   margin: 0;
   padding: 0;

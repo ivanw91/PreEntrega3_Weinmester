@@ -1,0 +1,47 @@
+/* CSS GALERIA */
+
+.gallery-item {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.description-btn:hover {
+    opacity: 1;
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.gallery-item:hover .description {
+    opacity: 1;
+}

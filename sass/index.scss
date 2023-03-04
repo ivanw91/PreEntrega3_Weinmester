@@ -163,3 +163,24 @@ footer div h6 {
     margin: 15px;
     height: 45px;
 }
+
+/* RESPONSIVE INDEX DESKTOP */
+
+@media (min-width: 1030px) {
+    .horarios {
+        grid-area: horarios;
+    }
+
+    .escribenos {
+        grid-area: escribenos;
+    }
+
+    .grid_area2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "horarios map"
+            "escribenos map";
+    }
+}
