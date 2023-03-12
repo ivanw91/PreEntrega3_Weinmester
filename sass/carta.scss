@@ -5,6 +5,7 @@
     grid-template-columns: 1fr;
     grid-template-areas:
         "Nav_bar"
+        "icons"
         "carta_s1"
         "carta_s2"
         "carta_s3"
@@ -21,26 +22,32 @@
 
 .carta_s1 {
     grid-area: carta_s1;
+    padding-top: 35px;
 }
 
 .carta_s2 {
     grid-area: carta_s2;
+    padding-top: 35px;
 }
 
 .carta_s3 {
     grid-area: carta_s3;
+    padding-top: 35px;
 }
 
 .carta_s4 {
     grid-area: carta_s4;
+    padding-top: 35px;
 }
 
 .carta_s5 {
     grid-area: carta_s5;
+    padding-top: 35px;
 }
 
 .carta_s6 {
     grid-area: carta_s6;
+    padding-top: 35px;
 }
 
 .footer {
@@ -49,12 +56,18 @@
 
 /* Botones flotantes */
 .menu_move {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    display: grid;
+    grid-area: icons;
+    position: sticky;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.503);;
 }
-
+.icon_nav {
+    font-size: 35px;
+    position: relative;
+}
 /* TEXT STYLE CARTA */
 h2,
 h4 {
