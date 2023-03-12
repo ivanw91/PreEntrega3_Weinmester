@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/floor-1256804_1280.jpg);
+}
+
 /* INDEX MOBILE FIRST */
 /* Layout */
 #grid_index {
@@ -8,93 +17,159 @@
         "section_2"
         "section_3";
 }
+
 .grid_area_1 {
     grid-area: section_1;
 }
+
 .grid_area_2 {
     grid-area: section_2;
 }
+
 .grid_area_3 {
     grid-area: section_3;
 }
+
+.div_img {
+    display: none;
+}
+
+.div_img1 {
+    display: none;
+}
+.div_h1{
+    display: none;;
+    grid-area: div_h1;
+}
+.div_text_intro {
+    display:  none;
+}
 /* Navbar */
+.Nav_bar {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 50%, #f25a3884 100%);
+}
+
+.navbar-toggler {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(45deg, rgb(0, 0, 0) 50%, #f25a38a7 100%);
+    border: 1px solid #ffffff;
+}
+
 .nav-link {
     text-align: center;
+    color: #f2bb16;
+    border-radius: 25px;
     margin: 5px;
     padding: 5px;
     font-size: 1.8rem;
     font-weight: 600;
 }
+
+.nav-link:hover {
+    color: #f25a38;
+    scale: 1.1;
+    transition: 0.2s;
+    text-decoration: underline;
+}
+
 .icon_wasap {
     height: 25px;
     width: 25px;
 }
+
 a {
     text-align: center;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
+
 .logo_container {
-    width: 300px;
+    width: 100%;
+    height: 100px;
     border-radius: 50px;
 }
+
 /* Text style */
 p {
     background-color: white;
     border-radius: 25px;
-    margin: 10px
+    margin: 10px;
+}
+h1{
+    background-color: white;
+
 }
 h3 {
     background-color: white;
     border-radius: 25px;
-    margin: 10px;
+    margin: 15px;
     font-family: "Seaweed Script", Sans-serif;
     font-size: 45px;
     font-weight: 400;
     text-align: center;
 }
+
 ul {
     padding-left: 0;
-    
 }
-.list_time{
+
+.list_time {
     background-color: white;
     border-radius: 25px;
     margin: 10px;
 
-    li{
+    li {
         font-family: Sans-serif;
         text-align: center;
-        font-size: 1.8rem;
+        font-size: 25px;
+        margin: 10px;
     }
 }
+
+.intro_text {
+    color: black;
+    font-family: Sans-serif;
+    text-align: center;
+    font-size: 22px;
+    margin: 10px;
+    padding: 10px;
+}
+
 /* Reserva */
 .div_reserva {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: white;
     border-radius: 25px;
     margin: 10px;
+
     p {
-        font-family: "Seaweed Script", Sans-serif;
-        font-size: 45px;
+        font-family:"Saira Semi Condensed", Sans-serif;
+        font-size: 22px;
         text-align: center;
     }
-    div{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    
-        a{
+    div {
+        a {
             background-color: rgb(144, 238, 144);
             border: 5px solid green;
             border-radius: 10px;
-            margin: 30px;
+            margin: 10px;
             font-size: 45px;
             font-weight: bold;
             font-family: "Saira Semi Condensed", Sans-serif;
             text-decoration: none;
-    }}
+        }
+    }
 }
+
+.boton_reserva:hover {
+    scale: 1.2;
+    transition: 1s;
+}
+
 /* Whatsapp Icon Container */
 .logo_reserva {
     height: 45px;
@@ -102,62 +177,96 @@ ul {
 }
 
 /* Mapa */
-h3.place {
-    font-family: "Seaweed Script", Sans-serif;
-    font-size: 35px;
-    background-color: white;
-    border-radius: 25px;
-    font-weight: 400;
-    text-align: center;
-}
-.map_place {
+
+.div_where {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    grid-area: map;
-}
-.mapa {
-    justify-content: center;
+    grid-area: div_where;
+
+    .h3_where {
+        font-family: "Seaweed Script", Sans-serif;
+        font-size: 35px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .div_map {
+        padding: 20px;
+        justify-content: center;
+        background-color: white;
+        border-radius: 25px;
+    }
 }
 
 /* Footer */
 
-footer{
+footer {
     background-color: black;
     grid-area: footer;
     margin-top: 15px;
-    
+
     div {
-    display: flex;
-    justify-content: center;
-    h6 {
-        color: rgba(255, 255, 255, 0.607);
-    }
-    
+        display: flex;
+        justify-content: center;
+
+        h6 {
+            color: rgba(255, 255, 255, 0.607);
+        }
     }
 }
-.sn_icon {
+
+.social_icon {
     margin: 15px;
     height: 45px;
 }
 
 /* RESPONSIVE INDEX DESKTOP */
 
-@media (min-width: 1030px) {
+@media (min-width: 1200px) {
+    .div_img {
+        grid-area: div_img;
+    }
+
+    .div_img1 {
+        grid-area: div_img1;
+    }
+
+    .div_text_intro {
+        grid-area: text_intro;
+    }
+
     .grid_area_time {
-        grid-area: time;
+        grid-area: div_time;
+        display: flex;
+        flex-direction: column;
+    justify-content: center;
     }
 
     .div_reserva {
         grid-area: div_reserva;
     }
 
+    .d-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img_empanada {
+        height: 65%;
+        width: 65%;
+    }
+
     .grid_area_2 {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0fr 0fr 0fr;
+        column-gap: 10px;
+        margin: 15px;
         grid-template-areas:
-            "time map"
-            "div_reserva map";
+            ". div_h1 ."
+            "div_img text_intro div_img1"
+            "div_time div_where div_reserva";
     }
 }

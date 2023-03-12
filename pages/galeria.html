@@ -5,54 +5,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <meta name="description" content="Pagina del restaurante el Argentino de Valsain. Horarios: 
+    Miércoles a Domingo: 12:00 a 17:00, 
+    Lunes y martes:Cerrado normalmente pero en festivos abrimos,por favor consultar! Miércoles: A veces cerramos si trabajamos el lunes.">
+    <meta name="keywords" content="RESTAURANTE, ARGENTINO, CARNE, PASTAS, VINO, COMIDA, PATATAS FRITAS, POSTRES, HELADOS, CERVEZAS">
+    <title>Galeria-Parrilla el Argentino</title>
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- MAIN CSS -->
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid flex-row-reverse">
-                <a class="navbar-brand" style="background-color: #f8f9fa ;" href="../index.html">
-                    <div><img src="../img/logo-icon.jpg" alt="logo icono"
-                            class="logo_container .d-inline-block .align-text-top" height="250" width="450">
+        <div class="Nav_bar">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid flex-row-reverse">
+                    <a class="navbar-brand" href="../index.html">
+                        <div><img src="../img/logo-icon.jpg" alt="logo icono"
+                                class="logo_container .d-inline-block .align-text-top" height="250" width="450">
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="carta.html">Carta</a>
+                            </li>
+                            <li class="nav-item" aria-current="page">
+                                <a class="nav-link active" style="color: #F25A38;" href="galeria.html">Galeria</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Sugerencias.html">Sugerencias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://api.whatsapp.com/send?phone=+34665689489&text=Hola!%20quisiera%20hacer%20una%20reserva:%10D%C3%ADa:%09Hora:%09Comensales%20(adultos%20y%20ni%C3%B1os):%09Alergias:">Reserva<img
+                                    class="icon_wasap" src="../img/Whatsapp_.png" alt="Reserva"></a>
+                            </li>
+                        </ul>
                     </div>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="carta.html">Carta</a>
-                        </li>
-                        <li class="nav-item active" aria-current="page">
-                            <a class="nav-link" href="galeria.html">Galeria</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Sugerencias.html">Sugerencias</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://api.whatsapp.com/send?phone=+34665689489&text=Hola!%20quisiera%20hacer%20una%20reserva:%10D%C3%ADa:%09Hora:%09Comensales%20(adultos%20y%20ni%C3%B1os):%09Alergias:">Reserva<img
-                                class="icon_wasap" src="../img/Whatsapp_.png" alt="Reserva"></a>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
         <h4 class="bg_shadow text_menu">Galeria</h2¡>
     </header>
     <main>
@@ -60,26 +69,93 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="gallery-item">
-                        <img src="../img/Comida1.png" alt="Imagen 1">
-                        <button class="description-btn">Ver descripción</button>
-                        <p class="description">ut sapiente dolorem rerum veniam tempore vel in eveniet totam, nobis ducimus ex est omnis pariatur, aliquid saepe veritatis officiis quas!
-                        </p>
+                        <img src="../img/spagueti arriba.jpg" alt="Imagen 1">
+                        <p class="description">Spagueti con salsa boloñesa</p>
+                    
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="gallery-item">
-                        <img src="https://via.placeholder.com/300x200" alt="Imagen 2">
-                        <button class="description-btn">Ver descripción</button>
-                        <p class="description">Descripción de la imagen 2</p>
+                        <img src="../img/chori.jpg" alt="Imagen 2">
+                        <p class="description">Chorizo criollo</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="gallery-item">
-                        <img src="https://via.placeholder.com/300x200" alt="Imagen 3">
-                        <button class="description-btn">Ver descripción</button>
-                        <p class="description">Bife de asado
-                            Corte que viene Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, ut sapiente dolorem rerum veniam tempore vel in eveniet totam, nobis ducimus ex est omnis pariatur, aliquid saepe veritatis officiis quas!
-                        </p>
+                        <img src="../img/provo.jpg" alt="Imagen 3">
+                        <p class="description">Provoleta</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="../img/ensaladas.jpg" alt="Imagen 4">
+                        <p class="description">Ensalada</p>
+                    </div>
+                </div>   
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="../img/raviol-bolo.jpg" alt="Fotografia de ravioles con salsa boloñesa">
+                        <p class="description">Ravioles con salsa boloñesa</p>
+                    </div>
+                </div>   
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="../img/raviol-esp.jpg" alt="Fotografia de Ravioles de espinaca">
+                        <p class="description">Ravioles de espinaca</p>
+                    </div>
+                </div>   
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="../img/verduras.jpg" alt="Fotografia de verduras salteadas">
+                        <p class="description">Verduras salteadas</p>
+                    </div>
+                </div>   
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="../img/vacio.jpg" alt="Imagen 8">
+                        <p class="description">Vacio</p>
+                    </div>
+                </div>   
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="../img/tira.jpg" alt="Imagen 9">
+                        <p class="description">Tira de asado</p>
+                    </div>
+                </div>   
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="../img/spagueti.jpg" alt="Imagen 10">
+                        <p class="description">Spaqueti con salsa boloñesa</p>
+                    </div>
+                </div>   
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="../img/mila.jpg" alt="Imagen 11">
+                        <p class="description">Milanesa</p>
+                    </div>
+                </div>   
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="../img/mila napo.jpg" alt="Imagen 12">
+                        <p class="description">Milanesa napolitana</p>
+                    </div>
+                </div>   
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="../img/vacio cortado.jpg" alt="Imagen 13">
+                        <p class="description">Chuleton</p>
+                    </div>
+                </div>   
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="../img/empanada.jpg" alt="Imagen 14">
+                        <p class="description">Empanadillas</p>
+                    </div>
+                </div>   
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="../img/papas.jpg" alt="Imagen 106">
+                        <p class="description">Patatas Fritas</p>
                     </div>
                 </div>
             </div>
@@ -87,9 +163,9 @@
 
     </main>
     <footer class="footer">
-        <div class="socialn">
-            <a href="https://www.facebook.com"><img class="sn_icon" src="../img/Facebook.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/"><img class="sn_icon" src="../img/instagram.png" alt="instagram"></a>
+        <div class="div_social">
+            <a href="https://www.facebook.com"><img class="social_icon" src="../img/Facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/"><img class="social_icon" src="../img/instagram.png" alt="instagram"></a>
         </div>
         <div>
             <h6>© 2023 by Ivan Weinmester. All rights reserved.</h6>

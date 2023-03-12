@@ -2,14 +2,7 @@
 @use "carta.scss";
 @use "galeria.scss";
 @use "contacto.scss";
-@use "sugerencias.scss";
-// estilo global
-*{
-    margin: 0;
-    padding: 0;
-}
-body {
-    background-image: url(../img/floor-1256804_1280.jpg);
-}
+@use "sugerencias.scss";// estilo global
+
 
 
