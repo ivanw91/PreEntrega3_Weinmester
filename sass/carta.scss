@@ -76,6 +76,7 @@ h4 {
 }
 
 h5 {
+    font-size: 20px;
     color: white black;
     padding: 10px;
     margin: 10px;
@@ -89,6 +90,7 @@ h5 {
     border-radius: 15px;
     margin: 5px;
 }
+
 
 .grid_area1,
 .grid_area2,
@@ -113,16 +115,16 @@ h5 {
 
 /* CARTA DESKTOP */
 @media (min-width: 1030px) {
-    .ge1 {
-        grid-area: ge1;
+    .div_empa2 {
+        grid-area: div_empa2;
     }
 
-    .ge2 {
-        grid-area: ge2;
+    .div_empa3 {
+        grid-area: div_empa3;
     }
 
-    .ge3 {
-        grid-area: ge3;
+    .div_empa1 {
+        grid-area: div_empa1;
     }
 
     .grid_empanada {
@@ -130,15 +132,45 @@ h5 {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 0fr 1fr;
         grid-template-areas:
-            "ge3 ge3"
-            "ge1 ge2";
+            "div_empa1 div_empa1"
+            "div_empa2 div_empa3";
     }
-
-    .gp {
+    .h4_carnes {
+        grid-area: h4_carnes;
+    }
+    .div_carnes1 {
+        grid-area: div_carnes1;
+    }
+    .div_carnes2 {
+        grid-area: div_carnes2;
+    }
+    .div_pastas1 {
+        grid-area: div_pastas1;
+    }
+    .div_pastas2 {
+        grid-area: div_pastas2;
+    }
+    .grid_carnes{
+        grid-area: carnes;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0fr 1fr;
+        grid-template-areas:
+            "h4_carnes h4_carnes"
+            "div_carnes1 div_carnes2"
+            "div_pastas1 div_pastas2";
+    }
+    .div_postres1{
+        grid-area: div_postres1;
+    }
+    .div_postres2{
+        grid-area: div_postres2;
+    }
+    .grid_postres {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-        grid-template-areas: "gp1 gp2";
+        grid-template-areas: "div_postres1 div_postres2";
     }
 
     #header {
@@ -155,22 +187,20 @@ h5 {
         grid-template-rows: 0fr 0.5fr 0.5fr 0fr;
         grid-template-areas:
             "header header header header"
-            "carta_s1 carta_s1 carta_s2 carta_s6"
-            "carta_s3 carta_s4 carta_s5 carta_s5"
+            "carta_s1 carta_s1 carta_s3 carta_s3"
+            "carta_s2 carta_s6 carta_s5 carta_s5"
             "footer footer footer footer";
-        justify-content: center;
+        
     }
 
-    .footer {
-        height: 100px;
-    }
-
+    
     section#C_1,
     section#C_2,
     section#C_3,
     section#C_4,
     section#C_5,
     section#C_6 {
+        box-shadow: 10px 10px rgba(0, 0, 0, 0.50);
         background-color: rgba(255, 255, 255, 0.377);
         border-radius: 10px;
         margin: 15px;
