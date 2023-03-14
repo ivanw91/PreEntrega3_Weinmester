@@ -1,0 +1,54 @@
+// COLORES
+
+$negro:black;
+$blanco:white;
+$color_orange: #f2bb16;
+$color_t_footer: rgba(255, 255, 255, 0.607);
+$color_borde_aviso: aquamarine;
+$color_bg_aviso: rgba(127, 229, 255, 0.774);
+$color_detail: rgba(200, 200, 200, 0.598);
+// ESTILOS DE FUENTES
+
+$fuente_primaria: "Seaweed Script", Sans-serif;
+$fuente_secundaria: "Saira Semi Condensed", Sans-serif;
+$font-size-1: 22px;
+$font-size-2: 25px;
+$font-size-3: 40px;
+$font-size-4: 50px;
+$t-center:center;
+
+// Margin, padding y Bordes
+$m-10:10px;
+$m-15:15px;
+$p-10:10px;
+$b-r-25px: 25px;
+$p-t-35: 35px;
+// Mixins
+
+// Display
+@mixin flexible($dir,$ali,$jus) {
+    display: flex;
+    flex-direction: $dir;
+    align-items: $ali;
+    justify-content: $jus;
+}
+
+// Box style   
+@mixin box-style(){
+    background-color: $blanco;
+    box-shadow: 10px 10px #0000008f;
+    border-radius: 15px;
+}
+
+// Box style carta
+@mixin box-style-c {
+    background-color: #0d0d0ddf;
+    border-radius: 15px;
+    margin: 15px;
+}
+@mixin box-bg-c{
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.50);
+    background-color: rgba(255, 255, 255, 0.377);
+    border-radius: 10px;
+    margin: 10px;
+}

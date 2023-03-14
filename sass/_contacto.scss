@@ -1,33 +1,24 @@
-/* STYLE SUGERENCIAS */
+@import "./variables";
 /* Formulario */
-.d-center-column{
-    display: flex;
-    flex-direction: column;
-    align-items: center;;
-}
 form {
     max-width: 500px;
-    margin: 15px;
+    margin: 0 auto;
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 5px;
+    @include box-style
 }
-
+.form{
+    display: flex;
+    justify-content: center;
+}
 h2 {
     text-align: center;
 }
 
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 textarea {
     width: 100%;
     padding: 10px;
@@ -43,7 +34,7 @@ textarea {
 
 button[type="submit"] {
     background-color: #4caf50;
-    color: #fff;
+    color: $blanco;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -51,5 +42,6 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
+    @include flexible (column,center,center);
     background-color: #3e8e41;
 }

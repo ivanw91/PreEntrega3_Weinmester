@@ -1,0 +1,175 @@
+@import "./variables";
+
+/* INDEX MOBILE FIRST */
+/* Layout */
+#grid_index {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "text_intro"
+        "div_img"
+        "section_1"
+        "section_2"
+        "section_3";
+}
+
+.grid_area_1 {
+    grid-area: section_1;
+}
+
+.grid_area_2 {
+    grid-area: section_2;
+}
+
+.grid_area_3 {
+    grid-area: section_3;
+}
+.div_text_intro {
+    grid-area: text_intro;
+}
+
+.div_img {
+    margin: $m-15;
+    grid-area: div_img;
+}
+.div_img1 {
+    margin: $m-15;
+    grid-area: div_img1;
+}
+
+.div_h1{
+    grid-area: div_h1;
+}
+.div_text_intro {
+    grid-area: text_intro;
+}
+.grid_area_time {
+    grid-area: div_time;
+    @include flexible (column,normal,center)
+}
+
+/* Text style */
+p {
+    background-color: $blanco;
+    border-radius: $b-r-25px;
+    margin: $m-10;
+}
+h1{
+    font-size: $font-size-4;
+    font-family: $fuente_primaria;
+    margin: $m-15;
+    background-color: $blanco;
+    text-align: $t-center;
+    @include box-style
+}
+h3 {
+    @include box-style;
+    margin: $m-15;
+    font-family: $fuente_primaria;
+    font-size: $font-size-3;
+    font-weight: 400;
+    text-align: $t-center;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.list_time {
+    @include box-style;
+    margin: $m-10;
+
+    li {
+        font-family: $fuente_secundaria;
+        text-align: $t-center;
+        font-size: $font-size-2;
+        margin: $m-10;
+        list-style: none;
+    }
+}
+.img_style{
+    @include box-style
+}
+.intro_text {
+    @include box-style;
+    color: $negro;
+    font-family: $fuente_secundaria;
+    text-align: $t-center;
+    font-size: 22px;
+    margin: $m-10;
+    padding: $p-10;
+}
+
+/* Reserva */
+.div_reserva {
+    @include box-style;
+    @include flexible (column,center,space-evenly);
+    background-color: $blanco;
+    margin: $m-15;
+
+    p {
+        font-family: $fuente_secundaria;
+        font-size: $font-size-1;
+        text-align: $t-center;
+    }
+    div {
+        a {
+            background-color: rgb(144, 238, 144);
+            border: 5px solid green;
+            border-radius: 10px;
+            margin: $m-10;
+            font-size: $font-size-4;
+            font-weight: bold;
+            font-family: $fuente_secundaria;
+            text-decoration: none;
+        }
+    }
+}
+.img_brindis {
+    width: 100vw;
+}
+.boton_reserva:hover {
+    scale: 1.2;
+    transition: 1s;
+}
+
+.logo_reserva {
+    height: 45px;
+    width: 45px;
+}
+
+/* Mapa */
+
+.div_where {
+    @include flexible(column,normal,center);
+    grid-area: div_where;
+
+    .h3_where {
+        font-family: $fuente_primaria;
+        font-size: $font-size-3;
+        text-align: $t-center;
+    }
+
+    .div_map {
+        padding: 20px;
+        justify-content: center;
+        @include box-style;
+    }
+}
+
+/* RESPONSIVE INDEX DESKTOP */
+
+@media (min-width: 1200px) {
+    .grid_area_2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0fr 0fr 0fr;
+        column-gap: 10px;
+        row-gap: 15px;
+        margin: $m-15;
+        grid-template-areas:
+            "div_h1 div_h1 div_h1"
+            "div_img text_intro div_img1"
+            "div_time div_reserva div_where";
+    }
+}

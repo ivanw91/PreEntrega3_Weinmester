@@ -1,3 +1,4 @@
+@import "./variables";
 /* ESTILOS CARTA MOBILE */
 
 .container_carta {
@@ -22,32 +23,32 @@
 
 .carta_s1 {
     grid-area: carta_s1;
-    padding-top: 35px;
+    padding-top: $p-t-35;
 }
 
 .carta_s2 {
     grid-area: carta_s2;
-    padding-top: 35px;
+    padding-top: $p-t-35;
 }
 
 .carta_s3 {
     grid-area: carta_s3;
-    padding-top: 35px;
+    padding-top: $p-t-35;
 }
 
 .carta_s4 {
     grid-area: carta_s4;
-    padding-top: 35px;
+    padding-top: $p-t-35;
 }
 
 .carta_s5 {
     grid-area: carta_s5;
-    padding-top: 35px;
+    padding-top: $p-t-35;
 }
 
 .carta_s6 {
     grid-area: carta_s6;
-    padding-top: 35px;
+    padding-top: $p-t-35;
 }
 
 .footer {
@@ -69,48 +70,68 @@
     position: relative;
 }
 /* TEXT STYLE CARTA */
-h2,
+h2{
+    font-size: $font-size-4;
+    font-family: $fuente_primaria;
+}
 h4 {
-    font-family: "Seaweed Script", cursive;
-    font-size: 2.5rem;
+    font-family: $fuente_primaria;
+    font-size: $font-size-3;
 }
 
 h5 {
-    font-size: 20px;
-    color: white black;
-    padding: 10px;
-    margin: 10px;
+    font-size: $font-size-2;
+    padding: $p-10;
+    margin: $m-10;
     border-left: solid 10px;
-    border-color: aquamarine;
-    background-color: rgba(127, 229, 255, 0.774);
+    border-color: $color_borde_aviso;
+    background-color: $color_bg_aviso;
 }
 
 .bg_shadow {
-    background-color: #0d0d0ddf;
-    border-radius: 15px;
-    margin: 5px;
+    @include box-style-c;
 }
-
 
 .grid_area1,
 .grid_area2,
 .grid_area3,
 .footer,
 #grid_container {
-    width: 100vw;
+    width: 99vw;
 }
-
+.text_menu_title{
+    color: $blanco;
+    text-align: $t-center;
+}
 .text_menu {
-    text-align: center;
-    color: white;
-    margin: 15px;
+    font-size:$font-size-1 ;
+    font-family: $fuente_secundaria;
+    text-align: $t-center;
+    color: $blanco;
+    margin: $m-15;
     text-decoration: none;
     list-style: none;
 }
 
 .info_detail {
-    margin-top: -15px;
-    color: rgba(200, 200, 200, 0.598);
+    margin-top: -$m-15;
+    color: $color_detail;
+}
+section#C_1,
+section#C_2,
+section#C_3,
+section#C_4,
+section#C_5,
+section#C_6 {
+        @include box-bg-c;
+        @include flexible(wrap, center, center)
+}
+
+@media (min-width: 1000px) {
+    .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
 }
 
 /* CARTA DESKTOP */
@@ -194,27 +215,6 @@ h5 {
     }
 
     
-    section#C_1,
-    section#C_2,
-    section#C_3,
-    section#C_4,
-    section#C_5,
-    section#C_6 {
-        box-shadow: 10px 10px rgba(0, 0, 0, 0.50);
-        background-color: rgba(255, 255, 255, 0.377);
-        border-radius: 10px;
-        margin: 15px;
-        display: flex;
-        justify-content: center;
-        align-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+    
 }
 
-@media (min-width: 1000px) {
-    .navbar-expand-lg {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-    }
-}

@@ -1,0 +1,84 @@
+@import "./variables";
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(../img/floor-1256804_1280.jpg);
+}
+.d-center {
+    @include flexible (row,center,center) 
+}
+/* Navbar */
+.Nav_bar {
+    background: linear-gradient(90deg, rgb(0, 0, 0) 50%, #f25a3884 100%);
+}
+
+.navbar-toggler {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(45deg, rgb(0, 0, 0) 50%, #f25a38a7 100%);
+    border: 1px solid #ffffff;
+}
+
+.nav-link {
+    text-align: $t-center;
+    color: $color_orange;
+    border-radius: $b-r-25px;
+    margin: 5px;
+    padding: 5px;
+    font-size: $font-size-3;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: #f25a38;
+    scale: 1.1;
+    transition: 0.2s;
+    text-decoration: underline;
+}
+
+.icon_wasap {
+    height: 25px;
+    width: 25px;
+}
+
+a {
+    text-align: $t-center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.logo_container {
+    width: 100%;
+    height: 100px;
+    border-radius: $b-r-25px;
+}
+.logo_container:hover{
+    scale: 1.2;
+    transition: 1s;
+}
+
+/* Footer */
+
+footer {
+    background-color: $negro;
+    grid-area: footer;
+    margin-top: $m-15;
+
+    div {
+        @include flexible (row,center,center);
+
+        h6 {
+            color: $color_t_footer;
+        }
+    }
+}
+
+.social_icon {
+    margin: $m-15;
+    height: 45px;
+}
+.social_icon:hover{
+    scale: 1.2;
+    transition: 1seg;
+}
