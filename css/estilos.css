@@ -499,7 +499,7 @@ section#C_6 {
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  color: white;
   padding: 10px;
   opacity: 0.8;
   transition: opacity 0.2s ease-in-out;
@@ -511,13 +511,14 @@ section#C_6 {
 
 .description {
   position: absolute;
+  bottom: 0;
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  color: white;
   padding: 10px;
   margin: 0;
-  font-size: 14px;
+  font-size: 25px;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
