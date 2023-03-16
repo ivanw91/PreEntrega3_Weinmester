@@ -62,7 +62,7 @@ h1{
     text-align: $t-center;
     @include box-style
 }
-h3 {
+h2,h3 {
     @include box-style;
     margin: $m-15;
     font-family: $fuente_primaria;
