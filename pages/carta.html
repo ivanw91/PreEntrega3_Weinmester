@@ -25,16 +25,15 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
-<body>
     <!-- GRID AREA CARTA -->
-    <section class="container_carta">
-        <section id="header">
-            <header>
+<body class="container_carta">
+            <header id="header">
                 <!-- NAV BAR -->
                 <div class="Nav_bar">
                     <nav class="navbar navbar-expand-xl">
                         <div class="container-fluid flex-row-reverse">
                             <a class="navbar-brand" href="../index.html">
+                                <!-- LOGO -->
                                 <div><img src="../img/logo-icon.jpg" alt="logo icono"
                                         class="logo_container .d-inline-block .align-text-top" height="250" width="450">
                                 </div>
@@ -73,9 +72,8 @@
                     </nav>
                 </div>
             </header>
-        </section>
         <!-- NAVEGADOR DE CARTA MOBILE -->
-        <section class="menu_move sticky-top wow animate__animated animate__hinge">
+        <section class="menu_move sticky-top">
             <ul class="nav nav-pills nav-fill">
                 <li class="icon_nav"><a class="nav-item" href="#C_1">👉🥟</a></li>
                 <li class="icon_nav"><a class="nav-item" href="#C_2">🥗</a></li>
@@ -89,62 +87,74 @@
         <section class="carta_s1" id="C_1">
             <div class="grid_empanada">
                 <div class="div_empa1 wow animate__animated animate__zoomInRight">
-                    <h2 class="titulo_carta text_menu_title bg_shadow">Empanadillas caseras🥟</h2>
-                    <h2 class="detail_carta text_menu_title bg_shadow">¡30 tipos de empanadillas caseras! 2,85€ / Unidad</h2>
-                    <h5 class="">Pregunte por las empanadillas sin gluten</h5>
+                    <h2 class="titulo_carta text_menu_title bg_shadow tittle_empanada">Empanadillas caseras🥟</h2>
+                    <h2 class="detail_carta text_menu_title bg_shadow tittle_empanada">¡30 tipos de empanadillas caseras! 2,85€ / Unidad</h2>
+                    <h5 class="tittle_empanada">Pregunte por las empanadillas sin gluten</h5>
                 </div >
-                <div class="div_empa2 bg_shadow wow animate__animated animate__flipInY">
-                    <h4 class="text_menu_title">General</h4>
-                    <ul class=>
-                        <li class="text_menu">Carne con aceitunas (EA)</li>
-                        <li class="text_menu">Carne con pasas (EP)</li>
-                        <li class="text_menu">Carne suave (ES)</li>
-                        <li class="text_menu">Carne con cmón y hierbabuena (BE)</li>
-                        <li class="text_menu">Pollo asado con Jamón (PO)</li>
-                        <li class="text_menu">Cordero de la zona (CO)</li>
-                        <li class="text_menu">Rabo de toro (T)</li>
-                        <li class="text_menu">Queso brie y sobrasada (BS)</li>
-                        <li class="text_menu">Jamón york y queso (JQ)</li>
-                        <li class="text_menu">Setas y jamón serrano (SJ)</li>
-                        <li class="text_menu">Alcachofas y jamón serrano (JA)</li>
-                    </ul>
-                    <h4 class="text_menu_title">Picantes</h4>
-                    <ul>
-                        <li class="text_menu">Carne picante lo justo (CP)</li>
-                        <li class="text_menu">Carne con chimichurri (CC)</li>
-                        <li class="text_menu">Carne con chipotle ¡PICANTE! (CH)</li>
-                    </ul>
-                    <h4 class="text_menu_title">Casqueria</h4>
-                    <ul>
-                        <li class="text_menu">Sesos (SE)</li>
-                        <li class="text_menu">Mollejas (ML)</li>
-                    </ul>
+                <div class="div_empa2 wow animate__animated animate__flipInY">
+                    <div class="bg_shadow">
+                        <h4 class="text_menu_title">General</h4>
+                        <ul class="empanada">
+                            <li class="text_menu">Carne con aceitunas (EA)</li>
+                            <li class="text_menu">Carne con pasas (EP)</li>
+                            <li class="text_menu">Carne suave (ES)</li>
+                            <li class="text_menu">Carne con cmón y hierbabuena (BE)</li>
+                            <li class="text_menu">Pollo asado con Jamón (PO)</li>
+                            <li class="text_menu">Cordero de la zona (CO)</li>
+                            <li class="text_menu">Rabo de toro (T)</li>
+                            <li class="text_menu">Queso brie y sobrasada (BS)</li>
+                            <li class="text_menu">Jamón york y queso (JQ)</li>
+                            <li class="text_menu">Setas y jamón serrano (SJ)</li>
+                            <li class="text_menu">Alcachofas y jamón serrano (JA)</li>
+                        </ul>
+                    </div>
+                    <div class="bg_shadow">
+                        <h4 class="text_menu_title">Picantes</h4>
+                        <ul class="empanada">
+                            <li class="text_menu">Carne picante lo justo (CP)</li>
+                            <li class="text_menu">Carne con chimichurri (CC)</li>
+                            <li class="text_menu">Carne con chipotle ¡PICANTE! (CH)</li>
+                        </ul>
+                    </div>
+                    <div class="bg_shadow">
+                        <h4 class="text_menu_title">Casqueria</h4>
+                        <ul class="empanada">
+                            <li class="text_menu">Sesos (SE)</li>
+                            <li class="text_menu">Mollejas (ML)</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="div_empa3 bg_shadow wow animate__animated animate__flipInY">
-                    <h4 class="text_menu_title">Frutos del mar</h4>
-                    <ul>
-                        <li class="text_menu">Mejillones tigre (MJ)</li>
-                        <li class="text_menu">Salmón y philadelphia Contiene pescado (S)</li>
-                        <li class="text_menu">Atún, cebolla y pimientos Contiene pescado (A)</li>
-                    </ul>
-                    <h4 class="text_menu_title ">Toque agridulce</h4>
-                    <ul>
-                        <li class="text_menu">Pera y gorgonzola (GO)</li>
-                        <li class="text_menu">Morcilla, manzana y nuez (MM)</li>
-                        <li class="text_menu">Secreto y puré de manzana (SM)</li>
-                    </ul>
-                    <h4 class="text_menu_title">Vegetales y queso</h4>
-                    <ul>
-                        <li class="text_menu">Espinacas con cebollita (E)</li>
-                        <li class="text_menu">Boletus (BO)</li>
-                        <li class="text_menu">Calabaza con queso (BA)</li>
-                        <li class="text_menu">Queso de cabra y cebolla caramelizada (QC)</li>
-                        <li class="text_menu">Queso provolone (flor)</li>
-                        <li class="text_menu">Queso brie y tomate seco (QB)</li>
-                        <li class="text_menu">Verduras con provolone(V)</li>
-                        <li class="text_menu">Requesón, albahaca y nuez(AA)</li>
-                        <li class="text_menu">Maiz, queso y albahaca</li>
-                    </ul>
+                <div class="div_empa3 wow animate__animated animate__flipInY ">
+                    <div class="bg_shadow">
+                        <h4 class="text_menu_title">Frutos del mar</h4>
+                        <ul class="empanada">
+                            <li class="text_menu">Mejillones tigre (MJ)</li>
+                            <li class="text_menu">Salmón y philadelphia Contiene pescado (S)</li>
+                            <li class="text_menu">Atún, cebolla y pimientos Contiene pescado (A)</li>
+                        </ul>
+                    </div>
+                    <div class="bg_shadow">
+                        <h4 class="text_menu_title ">Toque agridulce</h4>
+                        <ul class="empanada">
+                            <li class="text_menu">Pera y gorgonzola (GO)</li>
+                            <li class="text_menu">Morcilla, manzana y nuez (MM)</li>
+                            <li class="text_menu">Secreto y puré de manzana (SM)</li>
+                        </ul>
+                    </div>
+                    <div class="bg_shadow">
+                        <h4 class="text_menu_title">Vegetales y queso</h4>
+                        <ul class="empanada">
+                            <li class="text_menu">Espinacas con cebollita (E)</li>
+                            <li class="text_menu">Boletus (BO)</li>
+                            <li class="text_menu">Calabaza con queso (BA)</li>
+                            <li class="text_menu">Queso de cabra y cebolla caramelizada (QC)</li>
+                            <li class="text_menu">Queso provolone (flor)</li>
+                            <li class="text_menu">Queso brie y tomate seco (QB)</li>
+                            <li class="text_menu">Verduras con provolone(V)</li>
+                            <li class="text_menu">Requesón, albahaca y nuez(AA)</li>
+                            <li class="text_menu">Maiz, queso y albahaca</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -181,9 +191,11 @@
         <!-- CARTA SECCION PASTAS -->
         <section class="carta_s3" id="C_3">
             <div class="grid_carnes">
-
+                <h4 class="text_menu_title tittle_pasta bg_shadow wow animate__animated animate__flipInY">Pasta🍝</h4>
+                <h5 class="tittle_pasta1">Los ravioles se pueden pedir de dos sabores. Llevan salsa recomendada de nata y queso o boloñesa
+                    y se pueden pedir medias raciones a 10 euros</h5>
                 <div class="div_pastas1 wow animate__animated animate__flipInY">
-                    <h4 class="text_menu_title bg_shadow">Pasta🍝</h4>
+                    <h4 class="text_menu_title bg_shadow">Espaguetis</h4>    
                     <ul class="bg_shadow">
                         <li class="text_menu">Espaguetis caseros con salsa boloñesa (Contiene cereales) 12,50€</li>
                         <li class="text_menu">Espaguetis caseros con verduras salteadas con vino blanco y soja 12,50€
@@ -195,7 +207,7 @@
                 </div>
                 <div class="div_pastas2 wow animate__animated animate__flipInY">
                     <h4 class="text_menu_title bg_shadow">Ravioles caseros</h4>
-                    <ul class="bg_shadow">
+                    <ul class="bg_shadow .flex-row justify-content-around">
                         <li class="text_menu">Ravioles caseros de requesón, albahaca y nueces 15,90€</li>
                         <li class="text_menu">Ravioles caseros de calabaza 15,90€</li>
                         <li class="text_menu">Ravioles caseros de jamón y queso 15,90€</li>
@@ -204,8 +216,6 @@
                         <li class="text_menu">Ravioles caseros de rabo de toro 15,90€</li>
                         <li class="text_menu">Ravioles caseros de salmón 15,90€</li>
                     </ul>
-                    <h5>Los ravioles se pueden pedir de dos sabores. Llevan salsa recomendada de nata y queso o boloñesa
-                        y se pueden pedir medias raciones a 10 euros</h5>
                 </div>
                 <!-- CARTA SECCION CARNES -->
                 <br class="carta_s4" id="C_4">
@@ -252,8 +262,9 @@
         <!-- CARTA SECCION POSTRES -->
         <section class="carta_s5" id="C_5">
             <div class="grid_postres">
+                <h4 class="text_menu_title bg_shadow tittle_postres wow animate__animated animate__flipInY">Postres🍨</h4>
                 <div class="div_postres1 wow animate__animated animate__flipInY">
-                    <h4 class="text_menu_title bg_shadow">Postres🍨</h4>
+                    <h4 class="text_menu_title bg_shadow tittle_postres">Crepes</h4>
                     <ul class="bg_shadow">
                         <li class="text_menu">Crêpe de dulce de leche con caramelo crujiente 6.20€</li>
                         <li class="text_menu">Crêpe de chocolate con naranja o menta 6.20€</li>
@@ -325,16 +336,14 @@
         </section>
         <footer class="footer .container">
             <div class="div_social">
-                <a href="https://www.facebook.com"><img class="social_icon" src="../img/Facebook.png"
-                        alt="Facebook"></a>
-                <a href="https://www.instagram.com/"><img class="social_icon" src="../img/instagram.png"
-                        alt="instagram"></a>
+                <a href="https://www.facebook.com/tiopepevalsain"><img class="social_icon" src="../img/Facebook.png" alt="logo Facebook"></a>
+                <a href="https://www.instagram.com/elargentinodevalsain/"><img class="social_icon" src="../img/instagram.png" alt="logo instagram"></a>
+                <a href="https://www.linkedin.com/in/ivan-weinmester/"><img class="social_icon" src="../img/linkedin.png" alt="Logo linkedin"></a>
             </div>
             <div>
                 <h6>© 2023 by Ivan Weinmester. All rights reserved.</h6>
             </div>
         </footer>
-    </section>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <script src="../js/wow.js"></script>

@@ -94,7 +94,6 @@ h5 {
 .grid_area1,
 .grid_area2,
 .grid_area3,
-.footer,
 #grid_container {
     width: 99vw;
 }
@@ -123,9 +122,17 @@ section#C_4,
 section#C_5,
 section#C_6 {
         @include box-bg-c;
-        @include flexible(wrap, center, center)
+        @include flexible(column, normal, normal)
 }
-
+.empanada{
+    @include flexible(column, center, space-around);
+    li {
+        margin-bottom: 20px;
+    }
+}
+.tittle_empanada{
+    margin-bottom: 50px;
+}
 @media (min-width: 1000px) {
     .navbar-expand-lg {
         flex-wrap: nowrap;
@@ -170,14 +177,22 @@ section#C_6 {
     .div_pastas2 {
         grid-area: div_pastas2;
     }
+    .tittle_pasta {
+        grid-area: tittle_pasta;
+    }
+    .tittle_pasta1{
+        grid-area: tittle_pasta1;
+    }
     .grid_carnes{
         grid-area: carnes;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0fr 1fr;
+        grid-template-rows: 0fr 1fr 0fr;
         grid-template-areas:
             "h4_carnes h4_carnes"
             "div_carnes1 div_carnes2"
+            "tittle_pasta tittle_pasta"
+            "tittle_pasta1  tittle_pasta1"
             "div_pastas1 div_pastas2";
     }
     .div_postres1{
@@ -186,11 +201,16 @@ section#C_6 {
     .div_postres2{
         grid-area: div_postres2;
     }
+    .tittle_postres{
+        grid-area: tittle_postres;
+    }
     .grid_postres {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "div_postres1 div_postres2";
+        grid-template-rows: 0fr 1fr;
+        grid-template-areas: 
+        "tittle_postres tittle_postres"
+        "div_postres1 div_postres2";
     }
 
     #header {

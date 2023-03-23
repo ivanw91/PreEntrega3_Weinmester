@@ -1,15 +1,45 @@
 @import "./variables";
+// GRID SUGERENCIAS
+.grid_sugerencias{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-areas: 
+    "sugerencias accordion"
+    ;
+}
+.form_sugerencias{
+    margin: 15px;
+    width: 50vw;
+    grid-area: sugerencias;
+}
+.accordion{
+    border-radius: 25px;
+    --bs-accordion-bg: rgb(255, 255, 255);
+    --bs-accordion-border-color: rgb(0, 0, 0);
+    --bs-accordion-btn-focus-box-shadow:rgba(255, 255, 255, 0);
+    width: 50vw;
+    grid-area: accordion;
+}
+.accordion-button{
+    font-size: 1.5rem;
+}
+.accordion-item{
+    border-radius: 25px;
+    margin: 10px;
+}
+.faq{
+    margin: 25px;
+}
 /* STYLE SUGERENCIAS */
 /* Formulario */
 .d-center-column{
     display: flex;
     flex-direction: column;
-    align-items: center;;
+    align-items: center;
 }
-form {
-    max-width: 500px;
+.form_1 {
     margin: 15px;
-    background-color: #f2f2f2;
+    background-color: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 5px;
 }
@@ -53,4 +83,9 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #3e8e41;
+}
+.footer_sugerencias{
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }

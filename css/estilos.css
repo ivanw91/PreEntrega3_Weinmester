@@ -66,7 +66,7 @@ a {
 
 /* Footer */
 footer {
-  width: 100%;
+  width: 100vw;
   background-color: black;
   grid-area: footer;
   margin-top: 15px;
@@ -371,7 +371,6 @@ h5 {
 .grid_area1,
 .grid_area2,
 .grid_area3,
-.footer,
 #grid_container {
   width: 99vw;
 }
@@ -407,9 +406,23 @@ section#C_6 {
   border-radius: 10px;
   margin: 10px;
   display: flex;
-  flex-direction: wrap;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+}
+
+.empanada {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+}
+.empanada li {
+  margin-bottom: 20px;
+}
+
+.tittle_empanada {
+  margin-bottom: 50px;
 }
 
 @media (min-width: 1000px) {
@@ -450,12 +463,18 @@ section#C_6 {
   .div_pastas2 {
     grid-area: div_pastas2;
   }
+  .tittle_pasta {
+    grid-area: tittle_pasta;
+  }
+  .tittle_pasta1 {
+    grid-area: tittle_pasta1;
+  }
   .grid_carnes {
     grid-area: carnes;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0fr 1fr;
-    grid-template-areas: "h4_carnes h4_carnes" "div_carnes1 div_carnes2" "div_pastas1 div_pastas2";
+    grid-template-rows: 0fr 1fr 0fr;
+    grid-template-areas: "h4_carnes h4_carnes" "div_carnes1 div_carnes2" "tittle_pasta tittle_pasta" "tittle_pasta1  tittle_pasta1" "div_pastas1 div_pastas2";
   }
   .div_postres1 {
     grid-area: div_postres1;
@@ -463,11 +482,14 @@ section#C_6 {
   .div_postres2 {
     grid-area: div_postres2;
   }
+  .tittle_postres {
+    grid-area: tittle_postres;
+  }
   .grid_postres {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "div_postres1 div_postres2";
+    grid-template-rows: 0fr 1fr;
+    grid-template-areas: "tittle_postres tittle_postres" "div_postres1 div_postres2";
   }
   #header {
     grid-area: header;
@@ -538,21 +560,44 @@ section#C_6 {
   opacity: 1;
 }
 
+.grid-contacto {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 1fr, 1fr;
+  grid-template-areas: "contacto reserva-contacto" "horarios div_where-contacto";
+}
+
+.contacto {
+  grid-area: contacto;
+}
+
+.horarios {
+  grid-area: horarios;
+}
+
+.div_reserva-contacto {
+  grid-area: reserva-contacto;
+}
+
+.div_where-contacto {
+  grid-area: div_where-contacto;
+  margin: 15px;
+}
+
 /* Formulario */
-form {
-  max-width: 500px;
-  margin: 0 auto;
+.form {
+  grid-area: form;
+  margin: 10px;
+  padding: 10px;
   background-color: #f2f2f2;
-  padding: 20px;
-  border-radius: 5px;
   background-color: white;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.5607843137);
   border-radius: 15px;
-}
-
-.form {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
 }
 
 h2 {
@@ -575,6 +620,11 @@ textarea {
   height: 100px;
 }
 
+.submit {
+  display: block;
+  align-self: end;
+}
+
 button[type=submit] {
   background-color: #4caf50;
   color: white;
@@ -592,6 +642,49 @@ button[type=submit]:hover {
   background-color: #3e8e41;
 }
 
+@media (max-width: 1030px) {
+  .grid-contacto {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+    grid-template-areas: "contacto" "reserva-contacto" "horarios" "div_where-contacto";
+  }
+}
+.grid_sugerencias {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-areas: "sugerencias accordion";
+}
+
+.form_sugerencias {
+  margin: 15px;
+  width: 50vw;
+  grid-area: sugerencias;
+}
+
+.accordion {
+  border-radius: 25px;
+  --bs-accordion-bg: rgb(255, 255, 255);
+  --bs-accordion-border-color: rgb(0, 0, 0);
+  --bs-accordion-btn-focus-box-shadow:rgba(255, 255, 255, 0);
+  width: 50vw;
+  grid-area: accordion;
+}
+
+.accordion-button {
+  font-size: 1.5rem;
+}
+
+.accordion-item {
+  border-radius: 25px;
+  margin: 10px;
+}
+
+.faq {
+  margin: 25px;
+}
+
 /* STYLE SUGERENCIAS */
 /* Formulario */
 .d-center-column {
@@ -600,10 +693,9 @@ button[type=submit]:hover {
   align-items: center;
 }
 
-form {
-  max-width: 500px;
+.form_1 {
   margin: 15px;
-  background-color: #f2f2f2;
+  background-color: rgb(255, 255, 255);
   padding: 20px;
   border-radius: 5px;
 }
@@ -647,6 +739,12 @@ button[type=submit] {
 
 button[type=submit]:hover {
   background-color: #3e8e41;
+}
+
+.footer_sugerencias {
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=estilos.css.map */

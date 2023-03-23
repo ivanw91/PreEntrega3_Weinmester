@@ -1,16 +1,35 @@
 @import "./variables";
-/* Formulario */
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 5px;
-    @include box-style
+.grid-contacto {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr, 1fr ;
+    grid-template-rows: 1fr ,1fr;
+    grid-template-areas: 
+    "contacto reserva-contacto"
+    "horarios div_where-contacto";
 }
+.contacto {
+    grid-area: contacto;
+}
+.horarios{
+    grid-area: horarios;
+}
+.div_reserva-contacto{
+    grid-area: reserva-contacto;
+}
+.div_where-contacto{
+    grid-area: div_where-contacto;
+    margin: $m-15;
+}
+/* Formulario */
+
 .form{
-    display: flex;
-    justify-content: center;
+    grid-area: form;
+    margin: $m-10;
+    padding: $p-10;
+    background-color: #f2f2f2;
+    @include box-style;
+    @include flexible (column,normal,normal);
 }
 h2 {
     text-align: center;
@@ -31,7 +50,10 @@ textarea {
 textarea {
     height: 100px;
 }
-
+.submit{
+    display: block;
+    align-self: end;
+}
 button[type="submit"] {
     background-color: #4caf50;
     color: $blanco;
@@ -44,4 +66,20 @@ button[type="submit"] {
 button[type="submit"]:hover {
     @include flexible (column,center,center);
     background-color: #3e8e41;
+}
+@media (max-width: 1030px) { 
+    .grid-contacto {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: 4fr;
+        grid-template-areas: 
+        "contacto"
+        "reserva-contacto"
+        "horarios"
+        "div_where-contacto";
+    }
+    
+
+    
 }
