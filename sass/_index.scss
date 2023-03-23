@@ -83,7 +83,7 @@ ul {
 
 .list_time {
     @include box-style;
-    margin: $m-10;
+    margin: $m-15;
 
     li {
         font-family: $fuente_secundaria;
@@ -154,7 +154,7 @@ ul {
 .div_where {
     @include flexible(column, normal, center);
     grid-area: div_where;
-
+    margin: $m-15;
     .h3_where {
         font-family: $fuente_primaria;
         font-size: $font-size-3;

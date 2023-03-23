@@ -5,6 +5,7 @@
 }
 body {
     background-image: url(../img/floor-1256804_1280.jpg);
+    width: 99vw;
 }
 .d-center {
     @include flexible (row,center,center) 

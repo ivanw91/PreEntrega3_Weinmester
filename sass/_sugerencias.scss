@@ -3,13 +3,20 @@
 .grid_sugerencias{
     display: grid;
     grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr , 1fr, 1fr, 1fr;
     grid-template-areas: 
     "sugerencias accordion"
+    "comments comments"
+    "reviews reviews"
+    "footer footer"
     ;
+}
+.header_s{
+    grid-area: header_s ;
 }
 .form_sugerencias{
     margin: 15px;
-    width: 50vw;
+    width: 48vw;
     grid-area: sugerencias;
 }
 .accordion{
@@ -17,19 +24,17 @@
     --bs-accordion-bg: rgb(255, 255, 255);
     --bs-accordion-border-color: rgb(0, 0, 0);
     --bs-accordion-btn-focus-box-shadow:rgba(255, 255, 255, 0);
-    width: 50vw;
     grid-area: accordion;
+    width: 48vw;
 }
 .accordion-button{
     font-size: 1.5rem;
 }
 .accordion-item{
     border-radius: 25px;
-    margin: 10px;
+    margin: 15px;
 }
-.faq{
-    margin: 25px;
-}
+
 /* STYLE SUGERENCIAS */
 /* Formulario */
 .d-center-column{
@@ -85,7 +90,42 @@ button[type="submit"]:hover {
     background-color: #3e8e41;
 }
 .footer_sugerencias{
-    position: fixed;
-    left: 0;
     bottom: 0;
+    width: 100vw;
+}
+.reviews {
+    @include flexible(row, center ,center);
+    grid-area: reviews;
+    position: relative;
+    margin-left: 35px;
+    div img {
+        border-radius: 25px;
+        width: 85%;
+    }
+}
+.comments{
+    align-items: center;;
+    grid-area: comments;
+}
+@media (max-width: 1030px) { 
+    .grid_sugerencias{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr, 1fr;
+        justify-items: center;
+        grid-template-areas:
+        "header_s" 
+        "sugerencias"
+        "accordion"
+        "comments"
+        "reviews"
+        "footer"
+        ;
+    }
+    .comments, .reviews{
+        display: none;
+    }
+    .form_sugerencias,.accordion{
+        width: 80vw;
+    }
+    
 }

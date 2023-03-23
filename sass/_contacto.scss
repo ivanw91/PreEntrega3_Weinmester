@@ -6,7 +6,8 @@
     grid-template-rows: 1fr ,1fr;
     grid-template-areas: 
     "contacto reserva-contacto"
-    "horarios div_where-contacto";
+    "horarios div_where-contacto"
+    "footer footer";
 }
 .contacto {
     grid-area: contacto;
@@ -71,15 +72,19 @@ button[type="submit"]:hover {
     .grid-contacto {
         width: 100vw;
         display: grid;
+        justify-content: center;;
         grid-template-columns: 1fr; 
         grid-template-rows: 4fr;
         grid-template-areas: 
         "contacto"
         "reserva-contacto"
         "horarios"
-        "div_where-contacto";
+        "div_where-contacto"
+        "footer";
     }
-    
-
+    .contacto,.div_where-contacto,.horarios,.div_reserva-contacto {
+        width: 95vw;
+        margin: $m-15;
+    }
     
 }

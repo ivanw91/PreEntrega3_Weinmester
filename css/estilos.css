@@ -5,6 +5,7 @@
 
 body {
   background-image: url(../img/floor-1256804_1280.jpg);
+  width: 99vw;
 }
 
 .d-center {
@@ -179,7 +180,7 @@ ul {
   background-color: white;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.5607843137);
   border-radius: 15px;
-  margin: 10px;
+  margin: 15px;
 }
 .list_time li {
   font-family: "Saira Semi Condensed", Sans-serif;
@@ -256,6 +257,7 @@ ul {
   align-items: normal;
   justify-content: center;
   grid-area: div_where;
+  margin: 15px;
 }
 .div_where .h3_where {
   font-family: "Seaweed Script", Sans-serif;
@@ -565,7 +567,7 @@ section#C_6 {
   display: grid;
   grid-template-columns: 1fr, 1fr;
   grid-template-rows: 1fr, 1fr;
-  grid-template-areas: "contacto reserva-contacto" "horarios div_where-contacto";
+  grid-template-areas: "contacto reserva-contacto" "horarios div_where-contacto" "footer footer";
 }
 
 .contacto {
@@ -646,20 +648,30 @@ button[type=submit]:hover {
   .grid-contacto {
     width: 100vw;
     display: grid;
+    justify-content: center;
     grid-template-columns: 1fr;
     grid-template-rows: 4fr;
-    grid-template-areas: "contacto" "reserva-contacto" "horarios" "div_where-contacto";
+    grid-template-areas: "contacto" "reserva-contacto" "horarios" "div_where-contacto" "footer";
+  }
+  .contacto, .div_where-contacto, .horarios, .div_reserva-contacto {
+    width: 95vw;
+    margin: 15px;
   }
 }
 .grid_sugerencias {
   display: grid;
   grid-template-columns: 1fr, 1fr;
-  grid-template-areas: "sugerencias accordion";
+  grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+  grid-template-areas: "sugerencias accordion" "comments comments" "reviews reviews" "footer footer";
+}
+
+.header_s {
+  grid-area: header_s;
 }
 
 .form_sugerencias {
   margin: 15px;
-  width: 50vw;
+  width: 48vw;
   grid-area: sugerencias;
 }
 
@@ -668,8 +680,8 @@ button[type=submit]:hover {
   --bs-accordion-bg: rgb(255, 255, 255);
   --bs-accordion-border-color: rgb(0, 0, 0);
   --bs-accordion-btn-focus-box-shadow:rgba(255, 255, 255, 0);
-  width: 50vw;
   grid-area: accordion;
+  width: 48vw;
 }
 
 .accordion-button {
@@ -678,11 +690,7 @@ button[type=submit]:hover {
 
 .accordion-item {
   border-radius: 25px;
-  margin: 10px;
-}
-
-.faq {
-  margin: 25px;
+  margin: 15px;
 }
 
 /* STYLE SUGERENCIAS */
@@ -742,9 +750,42 @@ button[type=submit]:hover {
 }
 
 .footer_sugerencias {
-  position: fixed;
-  left: 0;
   bottom: 0;
+  width: 100vw;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  grid-area: reviews;
+  position: relative;
+  margin-left: 35px;
+}
+.reviews div img {
+  border-radius: 25px;
+  width: 85%;
+}
+
+.comments {
+  align-items: center;
+  grid-area: comments;
+}
+
+@media (max-width: 1030px) {
+  .grid_sugerencias {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr;
+    justify-items: center;
+    grid-template-areas: "header_s" "sugerencias" "accordion" "comments" "reviews" "footer";
+  }
+  .comments, .reviews {
+    display: none;
+  }
+  .form_sugerencias, .accordion {
+    width: 80vw;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
