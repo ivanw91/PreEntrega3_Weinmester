@@ -5,7 +5,6 @@
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr; 
-    grid-template-rows: 1fr,1fr,1fr,1fr;
     grid-template-areas: 
     "contacto"
     "reserva-contacto"
@@ -35,7 +34,7 @@
 }
 /* Formulario */
 
-.form{
+.form_contacto{
     grid-area: form;
     margin: $m-10;
     padding: $p-10;
@@ -84,7 +83,7 @@ button[type="submit"]:hover {
         width: 50vw;
     }  
     .grid-contacto {
-        width: 98vw;
+        width: 100vw;
         justify-content: center;
         display: grid;
         grid-template-columns: 1fr, 1fr ;
