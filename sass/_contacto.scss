@@ -79,13 +79,15 @@ button[type="submit"]:hover {
     @include flexible (column,center,center);
     background-color: #3e8e41;
 }
-@media (min-width: 1030px) { 
+@media (min-width: 1030px) {
+    .div_reserva-contacto{
+        width: 50vw;
+    }  
     .grid-contacto {
         width: 98vw;
         justify-content: center;
         display: grid;
         grid-template-columns: 1fr, 1fr ;
-        grid-template-rows: 1fr ,1fr,1fr;
         grid-template-areas: 
         "contacto reserva-contacto"
         "horarios div_where-contacto"

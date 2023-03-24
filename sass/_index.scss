@@ -3,26 +3,28 @@
 /* INDEX MOBILE FIRST */
 /* Layout */
 #grid_index {
+    width: 100vw;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-        "text_intro"
+        "header_index"
+        "div_h1"
         "div_img"
-        "section_1"
-        "section_2"
-        "section_3";
+        "text_intro"
+        "div_img1"
+        "div_time"
+        "div_reserva"
+        "div_where"
+        "footer_index";
 }
 
 .grid_area_1 {
-    grid-area: section_1;
+    grid-area: header_index;
 }
 
-.grid_area_2 {
-    grid-area: section_2;
-}
 
 .grid_area_3 {
-    grid-area: section_3;
+    grid-area: footer_index;
 }
 
 .div_text_intro {
@@ -96,6 +98,7 @@ ul {
 }
 
 .img_style {
+    max-width: 350px;
     @include box-style;
 }
 
@@ -104,13 +107,14 @@ ul {
     color: $negro;
     font-family: $fuente_secundaria;
     text-align: $t-center;
-    font-size: 22px;
+    font-size: $font-size-1;
     margin: $m-10;
     padding: $p-10;
 }
 
 /* Reserva */
 .div_reserva {
+    grid-area: div_reserva;
     @include box-style;
     @include flexible(column, center, space-evenly);
     background-color: $blanco;
@@ -174,14 +178,15 @@ ul {
 /* RESPONSIVE INDEX DESKTOP */
 
 @media (min-width: 1200px) {
-    .grid_area_2 {
-        padding: 25px;
+    #grid_index {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 0fr 0fr 0fr;
         grid-template-areas:
+            "header_index header_index header_index"
             "div_h1 div_h1 div_h1"
             "div_img text_intro div_img1"
-            "div_time div_reserva div_where";
+            "div_time div_reserva div_where"
+            "footer_index footer_index footer_index";
     }
 }

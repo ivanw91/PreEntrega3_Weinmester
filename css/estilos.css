@@ -95,21 +95,18 @@ footer div h6 {
 /* INDEX MOBILE FIRST */
 /* Layout */
 #grid_index {
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "text_intro" "div_img" "section_1" "section_2" "section_3";
+  grid-template-areas: "header_index" "div_h1" "div_img" "text_intro" "div_img1" "div_time" "div_reserva" "div_where" "footer_index";
 }
 
 .grid_area_1 {
-  grid-area: section_1;
-}
-
-.grid_area_2 {
-  grid-area: section_2;
+  grid-area: header_index;
 }
 
 .grid_area_3 {
-  grid-area: section_3;
+  grid-area: footer_index;
 }
 
 .div_text_intro {
@@ -191,6 +188,7 @@ ul {
 }
 
 .img_style {
+  max-width: 350px;
   background-color: white;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.5607843137);
   border-radius: 15px;
@@ -210,6 +208,7 @@ ul {
 
 /* Reserva */
 .div_reserva {
+  grid-area: div_reserva;
   background-color: white;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.5607843137);
   border-radius: 15px;
@@ -274,12 +273,11 @@ ul {
 
 /* RESPONSIVE INDEX DESKTOP */
 @media (min-width: 1200px) {
-  .grid_area_2 {
-    padding: 25px;
+  #grid_index {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0fr 0fr 0fr;
-    grid-template-areas: "div_h1 div_h1 div_h1" "div_img text_intro div_img1" "div_time div_reserva div_where";
+    grid-template-areas: "header_index header_index header_index" "div_h1 div_h1 div_h1" "div_img text_intro div_img1" "div_time div_reserva div_where" "footer_index footer_index footer_index";
   }
 }
 /* ESTILOS CARTA MOBILE */
@@ -650,12 +648,14 @@ button[type=submit]:hover {
 }
 
 @media (min-width: 1030px) {
+  .div_reserva-contacto {
+    width: 50vw;
+  }
   .grid-contacto {
     width: 98vw;
     justify-content: center;
     display: grid;
     grid-template-columns: 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr, 1fr;
     grid-template-areas: "contacto reserva-contacto" "horarios div_where-contacto" "footer footer";
   }
 }
