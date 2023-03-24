@@ -5,7 +5,8 @@
 }
 body {
     background-image: url(../img/floor-1256804_1280.jpg);
-    width: 99vw;
+    max-width: 100%;
+
 }
 .d-center {
     @include flexible (row,center,center) 
@@ -62,7 +63,6 @@ a {
 /* Footer */
 
 footer {
-    width: 100vw;
     background-color: $negro;
     grid-area: footer;
     margin-top: $m-15;
@@ -71,6 +71,7 @@ footer {
         @include flexible (row,center,center);
 
         h6 {
+            text-align: center;
             color: $color_t_footer;
         }
     }

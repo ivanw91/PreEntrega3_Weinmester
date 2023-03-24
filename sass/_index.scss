@@ -34,7 +34,8 @@
     grid-area: div_img;
 }
 
-.div_img1 {
+.div_img1 {   
+
     margin: $m-15;
     grid-area: div_img1;
 }
@@ -136,7 +137,7 @@ ul {
 }
 
 .img_brindis {
-    width: 100vw;
+    width: 100%;
 }
 
 .boton_reserva:hover {
@@ -174,16 +175,13 @@ ul {
 
 @media (min-width: 1200px) {
     .grid_area_2 {
+        padding: 25px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 0fr 0fr 0fr;
-        column-gap: 10px;
-        row-gap: 15px;
-        margin: $m-15;
         grid-template-areas:
             "div_h1 div_h1 div_h1"
             "div_img text_intro div_img1"
             "div_time div_reserva div_where";
     }
-
 }

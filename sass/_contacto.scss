@@ -1,22 +1,33 @@
 @import "./variables";
+
 .grid-contacto {
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr, 1fr ;
-    grid-template-rows: 1fr ,1fr;
+    justify-content: center;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr,1fr,1fr,1fr;
     grid-template-areas: 
-    "contacto reserva-contacto"
-    "horarios div_where-contacto"
-    "footer footer";
+    "contacto"
+    "reserva-contacto"
+    "horarios"
+    "div_where-contacto"
+    "footer";
 }
+.contacto,.div_where-contacto,.horarios,.div_reserva-contacto {
+    margin: $m-15;
+}
+
 .contacto {
     grid-area: contacto;
 }
 .horarios{
     grid-area: horarios;
+    margin: $m-15;
+
 }
 .div_reserva-contacto{
     grid-area: reserva-contacto;
+    margin: $m-15;
 }
 .div_where-contacto{
     grid-area: div_where-contacto;
@@ -68,23 +79,17 @@ button[type="submit"]:hover {
     @include flexible (column,center,center);
     background-color: #3e8e41;
 }
-@media (max-width: 1030px) { 
+@media (min-width: 1030px) { 
     .grid-contacto {
-        width: 100vw;
+        width: 98vw;
+        justify-content: center;
         display: grid;
-        justify-content: center;;
-        grid-template-columns: 1fr; 
-        grid-template-rows: 4fr;
+        grid-template-columns: 1fr, 1fr ;
+        grid-template-rows: 1fr ,1fr,1fr;
         grid-template-areas: 
-        "contacto"
-        "reserva-contacto"
-        "horarios"
-        "div_where-contacto"
-        "footer";
-    }
-    .contacto,.div_where-contacto,.horarios,.div_reserva-contacto {
-        width: 95vw;
-        margin: $m-15;
+        "contacto reserva-contacto"
+        "horarios div_where-contacto"
+        "footer footer";
     }
     
 }

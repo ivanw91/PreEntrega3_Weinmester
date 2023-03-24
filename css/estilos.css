@@ -5,7 +5,7 @@
 
 body {
   background-image: url(../img/floor-1256804_1280.jpg);
-  width: 99vw;
+  max-width: 100%;
 }
 
 .d-center {
@@ -67,7 +67,6 @@ a {
 
 /* Footer */
 footer {
-  width: 100vw;
   background-color: black;
   grid-area: footer;
   margin-top: 15px;
@@ -79,6 +78,7 @@ footer div {
   justify-content: center;
 }
 footer div h6 {
+  text-align: center;
   color: rgba(255, 255, 255, 0.607);
 }
 
@@ -237,7 +237,7 @@ ul {
 }
 
 .img_brindis {
-  width: 100vw;
+  width: 100%;
 }
 
 .boton_reserva:hover {
@@ -275,12 +275,10 @@ ul {
 /* RESPONSIVE INDEX DESKTOP */
 @media (min-width: 1200px) {
   .grid_area_2 {
+    padding: 25px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0fr 0fr 0fr;
-    column-gap: 10px;
-    row-gap: 15px;
-    margin: 15px;
     grid-template-areas: "div_h1 div_h1 div_h1" "div_img text_intro div_img1" "div_time div_reserva div_where";
   }
 }
@@ -565,9 +563,14 @@ section#C_6 {
 .grid-contacto {
   width: 100vw;
   display: grid;
-  grid-template-columns: 1fr, 1fr;
-  grid-template-rows: 1fr, 1fr;
-  grid-template-areas: "contacto reserva-contacto" "horarios div_where-contacto" "footer footer";
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+  grid-template-areas: "contacto" "reserva-contacto" "horarios" "div_where-contacto" "footer";
+}
+
+.contacto, .div_where-contacto, .horarios, .div_reserva-contacto {
+  margin: 15px;
 }
 
 .contacto {
@@ -576,10 +579,12 @@ section#C_6 {
 
 .horarios {
   grid-area: horarios;
+  margin: 15px;
 }
 
 .div_reserva-contacto {
   grid-area: reserva-contacto;
+  margin: 15px;
 }
 
 .div_where-contacto {
@@ -644,21 +649,18 @@ button[type=submit]:hover {
   background-color: #3e8e41;
 }
 
-@media (max-width: 1030px) {
+@media (min-width: 1030px) {
   .grid-contacto {
-    width: 100vw;
-    display: grid;
+    width: 98vw;
     justify-content: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4fr;
-    grid-template-areas: "contacto" "reserva-contacto" "horarios" "div_where-contacto" "footer";
-  }
-  .contacto, .div_where-contacto, .horarios, .div_reserva-contacto {
-    width: 95vw;
-    margin: 15px;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    grid-template-areas: "contacto reserva-contacto" "horarios div_where-contacto" "footer footer";
   }
 }
 .grid_sugerencias {
+  width: 95vw;
   display: grid;
   grid-template-columns: 1fr, 1fr;
   grid-template-rows: 1fr, 1fr, 1fr, 1fr;
@@ -751,7 +753,7 @@ button[type=submit]:hover {
 
 .footer_sugerencias {
   bottom: 0;
-  width: 100vw;
+  width: 100%;
 }
 
 .reviews {
