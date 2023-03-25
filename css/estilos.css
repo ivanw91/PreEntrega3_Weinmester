@@ -23,6 +23,7 @@ body {
   background: rgb(2, 0, 36);
   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(242, 90, 56, 0.5176470588) 100%);
   border: 1px solid #ffffff;
+  margin-left: 15px;
 }
 
 .nav-link {
@@ -94,17 +95,23 @@ footer div h6 {
 /* INDEX MOBILE FIRST */
 /* Layout */
 #grid_index {
-  width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "header_index" "div_h1" "div_img" "text_intro" "div_img1" "div_time" "div_reserva" "div_where" "footer_index";
+  grid-template-areas: "header_index" "grid_main-index" "footer_index";
 }
 
-@media (min-width: 300px) {
-  #grid_index {
-    width: 100vw;
-  }
+#grid_main-index {
+  overflow-x: hidden;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0fr;
+  grid-template-areas: "div_h1" "div_img" "text_intro" "div_img1" "div_time" "div_reserva" "div_where";
 }
+
+#grid_main-index {
+  grid-area: grid_main-index;
+}
+
 .grid_area_1 {
   grid-area: header_index;
 }
@@ -276,18 +283,22 @@ ul {
   border-radius: 15px;
 }
 
-.container-fluid, .container-lg {
+.container-fluid, .container, .contailer-lg {
   --bs-gutter-x: 0;
 }
 
 /* RESPONSIVE INDEX DESKTOP */
 @media (min-width: 1200px) {
   #grid_index {
-    width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr, 0fr, 0fr;
+    grid-template-areas: "header_index" "grid_main-index" "footer_index";
+  }
+  #grid_main-index {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0fr 0fr 0fr;
-    grid-template-areas: "header_index header_index header_index" "div_h1 div_h1 div_h1" "div_img text_intro div_img1" "div_time div_reserva div_where" "footer_index footer_index footer_index";
+    grid-template-rows: 0fr 1fr 1fr;
+    grid-template-areas: "div_h1 div_h1 div_h1" "div_img text_intro div_img1" "div_time div_reserva div_where";
   }
 }
 /* ESTILOS CARTA MOBILE */
@@ -555,6 +566,7 @@ section#C_6 {
 }
 
 .gallery-item {
+  overflow-x: hidden;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.5607843137);
   border-radius: 20px;
 }
@@ -569,7 +581,7 @@ section#C_6 {
 }
 
 .grid-contacto {
-  width: 100vw;
+  width: 98vw;
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr;

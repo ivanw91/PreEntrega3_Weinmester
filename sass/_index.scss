@@ -2,12 +2,21 @@
 
 /* INDEX MOBILE FIRST */
 /* Layout */
-#grid_index {
-    width: 100vw;
+
+#grid_index{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-        "header_index"
+    "header_index"
+    "grid_main-index"
+    "footer_index";
+}
+#grid_main-index {
+    overflow-x: hidden;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0fr;
+    grid-template-areas:
         "div_h1"
         "div_img"
         "text_intro"
@@ -15,19 +24,13 @@
         "div_time"
         "div_reserva"
         "div_where"
-        "footer_index";
 }
-@media (min-width: 300px) {
-    #grid_index{
-        width: 100vw;
-    }
+#grid_main-index {
+    grid-area: grid_main-index;
 }
-
 .grid_area_1 {
     grid-area: header_index;
 }
-
-
 .grid_area_3 {
     grid-area: footer_index;
 }
@@ -42,7 +45,6 @@
 }
 
 .div_img1 {   
-
     margin: $m-15;
     grid-area: div_img1;
 }
@@ -179,25 +181,32 @@ ul {
     }
 }
 
-.container-fluid,.container-lg{
+.container-fluid,.container,.contailer-lg{
     --bs-gutter-x: 0;
 }
 
 /* RESPONSIVE INDEX DESKTOP */
 
 @media (min-width: 1200px) {
+    #grid_index{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr,0fr,0fr;
+        grid-template-areas:
+        "header_index"
+        "grid_main-index"
+        "footer_index";
+    }
 
 
-    #grid_index {
-        width: 100vw;
+
+    #grid_main-index {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0fr 0fr 0fr;
+        grid-template-rows: 0fr 1fr 1fr;
         grid-template-areas:
-            "header_index header_index header_index"
             "div_h1 div_h1 div_h1"
             "div_img text_intro div_img1"
-            "div_time div_reserva div_where"
-            "footer_index footer_index footer_index";
+            "div_time div_reserva div_where";
+
     }
 }

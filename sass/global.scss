@@ -5,8 +5,6 @@
 }
 body {
     background-image: url(../img/floor-1256804_1280.jpg);
-
-
 }
 .d-center {
     @include flexible (row,center,center) 
@@ -20,6 +18,7 @@ body {
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, #f25a3884 100%);
     border: 1px solid #ffffff;
+    margin-left: $m-15;
 }
 
 .nav-link {

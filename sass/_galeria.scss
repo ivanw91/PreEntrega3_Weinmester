@@ -42,6 +42,7 @@
     transition: opacity 0.2s ease-in-out;
 }
 .gallery-item {
+    overflow-x: hidden;
     box-shadow: 10px 10px #0000008f;
     border-radius: 20px;
 }
