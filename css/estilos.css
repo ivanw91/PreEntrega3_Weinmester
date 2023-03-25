@@ -5,7 +5,6 @@
 
 body {
   background-image: url(../img/floor-1256804_1280.jpg);
-  max-width: 100%;
 }
 
 .d-center {
@@ -272,9 +271,14 @@ ul {
   border-radius: 15px;
 }
 
+.container-fluid, .container {
+  --bs-gutter-x: 0 ;
+}
+
 /* RESPONSIVE INDEX DESKTOP */
 @media (min-width: 1200px) {
   #grid_index {
+    width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0fr 0fr 0fr;
