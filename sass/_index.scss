@@ -15,7 +15,7 @@
     overflow-x: hidden;
     display: grid;
     align-items: center;
-    grid-template-columns: 0fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
         "div_h1"
         "div_img"
@@ -175,9 +175,15 @@ ul {
     }
 
     .div_map {
+        width: 100%;
+        height: 100%;
         padding: 20px;
         justify-content: center;
         @include box-style;
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 
@@ -201,6 +207,7 @@ ul {
 
     #grid_main-index {
         display: grid;
+        width: 100%;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 0fr 1fr 1fr;
         grid-template-areas:
