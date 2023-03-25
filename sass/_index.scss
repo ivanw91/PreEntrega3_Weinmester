@@ -17,7 +17,6 @@
         "div_where"
         "footer_index";
 }
-
 .grid_area_1 {
     grid-area: header_index;
 }
@@ -98,6 +97,7 @@ ul {
 }
 
 .img_style {
+    overflow-x: hidden;
     max-width: 350px;
     @include box-style;
 }

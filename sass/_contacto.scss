@@ -12,14 +12,15 @@
     "div_where-contacto"
     "footer";
 }
-.contacto,.div_where-contacto,.horarios,.div_reserva-contacto {
+.contacto,.div_where-contacto,.horarios_contacto,.div_reserva-contacto {
+    width: 95vw;
     margin: $m-15;
 }
 
 .contacto {
     grid-area: contacto;
 }
-.horarios{
+.horarios_contacto{
     grid-area: horarios;
     margin: $m-15;
 

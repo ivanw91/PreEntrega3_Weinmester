@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 body {
@@ -189,6 +188,7 @@ ul {
 }
 
 .img_style {
+  overflow-x: hidden;
   max-width: 350px;
   background-color: white;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.5607843137);
@@ -567,7 +567,8 @@ section#C_6 {
   grid-template-areas: "contacto" "reserva-contacto" "horarios" "div_where-contacto" "footer";
 }
 
-.contacto, .div_where-contacto, .horarios, .div_reserva-contacto {
+.contacto, .div_where-contacto, .horarios_contacto, .div_reserva-contacto {
+  width: 95vw;
   margin: 15px;
 }
 
@@ -575,7 +576,7 @@ section#C_6 {
   grid-area: contacto;
 }
 
-.horarios {
+.horarios_contacto {
   grid-area: horarios;
   margin: 15px;
 }
