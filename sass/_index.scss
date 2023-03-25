@@ -17,6 +17,12 @@
         "div_where"
         "footer_index";
 }
+@media (min-width: 300px) {
+    #grid_index{
+        width: 100vw;
+    }
+}
+
 .grid_area_1 {
     grid-area: header_index;
 }
@@ -132,7 +138,7 @@ ul {
             border: 5px solid green;
             border-radius: 10px;
             margin: $m-10;
-            font-size: $font-size-4;
+            font-size: $font-size-2;
             font-weight: bold;
             font-family: $fuente_secundaria;
             text-decoration: none;
@@ -173,8 +179,8 @@ ul {
     }
 }
 
-.container-fluid,.container {
-    --bs-gutter-x: 0
+.container-fluid,.container-lg{
+    --bs-gutter-x: 0;
 }
 
 /* RESPONSIVE INDEX DESKTOP */

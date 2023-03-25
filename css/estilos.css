@@ -100,6 +100,11 @@ footer div h6 {
   grid-template-areas: "header_index" "div_h1" "div_img" "text_intro" "div_img1" "div_time" "div_reserva" "div_where" "footer_index";
 }
 
+@media (min-width: 300px) {
+  #grid_index {
+    width: 100vw;
+  }
+}
 .grid_area_1 {
   grid-area: header_index;
 }
@@ -229,7 +234,7 @@ ul {
   border: 5px solid green;
   border-radius: 10px;
   margin: 10px;
-  font-size: 50px;
+  font-size: 25px;
   font-weight: bold;
   font-family: "Saira Semi Condensed", Sans-serif;
   text-decoration: none;
@@ -271,8 +276,8 @@ ul {
   border-radius: 15px;
 }
 
-.container-fluid, .container {
-  --bs-gutter-x: 0 ;
+.container-fluid, .container-lg {
+  --bs-gutter-x: 0;
 }
 
 /* RESPONSIVE INDEX DESKTOP */
@@ -572,7 +577,7 @@ section#C_6 {
 }
 
 .contacto, .div_where-contacto, .horarios_contacto, .div_reserva-contacto {
-  width: 95vw;
+  max-width: auto;
   margin: 15px;
 }
 
