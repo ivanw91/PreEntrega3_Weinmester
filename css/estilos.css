@@ -199,8 +199,6 @@ ul {
 }
 
 .img_style {
-  overflow-x: hidden;
-  max-width: 350px;
   background-color: white;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.5607843137);
   border-radius: 15px;
@@ -265,10 +263,12 @@ ul {
 .div_where {
   display: flex;
   flex-direction: column;
-  align-items: normal;
+  align-items: center;
   justify-content: center;
   grid-area: div_where;
   margin: 15px;
+  width: 95%;
+  height: 95%;
 }
 .div_where .h3_where {
   font-family: "Seaweed Script", Sans-serif;
@@ -297,7 +297,6 @@ ul {
 @media (min-width: 1200px) {
   #grid_index {
     grid-template-columns: 1fr;
-    grid-template-rows: 0fr, 0fr, 0fr;
     grid-template-areas: "header_index" "grid_main-index" "footer_index";
   }
   #grid_main-index {
@@ -615,6 +614,7 @@ section#C_6 {
 }
 
 .div_where-contacto {
+  height: 90%;
   grid-area: div_where-contacto;
   margin: 15px;
 }
